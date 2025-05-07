@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beranda Film</title>
+    <script defer>
+      // Scroll function for carousel
+      function scrollCarousel(id, direction) {
+        const container = document.getElementById(id);
+        const scrollAmount = 300;
+        container.scrollBy({
+          left: direction === "left" ? -scrollAmount : scrollAmount,
+          behavior: "smooth",
+        });
+      }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-900 text-white font-sans px-10 py-10">
+    <!-- Section 1: Melanjutkan Tonton Film -->
+    <div class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4">Melanjutkan Tonton Film</h2>
+      <div class="relative">
+        <button
+          onclick="scrollCarousel('carousel1', 'left')"
+          class="absolute left-0 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 p-2 rounded-full z-10"
+        >
+          &#9664;
+        </button>
+        <div
+          id="carousel1"
+          class="flex overflow-x-scroll scrollbar-hide gap-4 scroll-smooth"
+        >
+          <!-- Item -->
+          <div class="min-w-[200px] bg-gray-800 rounded-lg p-2">
+            <img
+              src="img/Number1.jpg"
+              alt="Don't Look Up"
+              class="rounded-lg w-full h-[120px] object-cover"
+            />
+            <div class="mt-2 text-sm">Don't Look Up</div>
+            <div class="text-xs text-gray-400">⭐ 4.5/5</div>
+          </div>
+          <!-- Tambahkan item lainnya sesuai kebutuhan -->
+          <!-- Contoh lainnya -->
+          <div class="min-w-[200px] bg-gray-800 rounded-lg p-2">
+            <img
+              src="img/Number2.jpg"
+              alt="The Batman"
+              class="rounded-lg w-full h-[120px] object-cover"
+            />
+            <div class="mt-2 text-sm">The Batman</div>
+            <div class="text-xs text-gray-400">⭐ 4.2/5</div>
+          </div>
+          <!-- ... -->
+        </div>
+        <button
+          onclick="scrollCarousel('carousel1', 'right')"
+          class="absolute right-0 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 p-2 rounded-full z-10"
+        >
+          &#9654;
+        </button>
+      </div>
+    </div>
+
+    <!-- Section 2: Top Rating Film dan Series Hari Ini -->
+    <div>
+      <h2 class="text-2xl font-semibold mb-4">
+        Top Rating Film dan Series Hari ini
+      </h2>
+      <div class="relative">
+        <button
+          onclick="scrollCarousel('carousel2', 'left')"
+          class="absolute left-0 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 p-2 rounded-full z-10"
+        >
+          &#9664;
+        </button>
+        <div
+          id="carousel2"
+          class="flex overflow-x-scroll scrollbar-hide gap-4 scroll-smooth"
+        >
+          <!-- Poster film -->
+          <div class="min-w-[160px]">
+            <img
+              src="img/Number3.jpg"
+              alt="Suzume"
+              class="rounded-lg w-full h-[240px] object-cover"
+            />
+          </div>
+          <div class="min-w-[160px]">
+            <img
+              src="img/Number4.jpg"
+              alt="Jurassic World"
+              class="rounded-lg w-full h-[240px] object-cover"
+            />
+          </div>
+          <div class="min-w-[160px]">
+            <img
+              src="img/Number5.jpg"
+              alt="Sonic 2"
+              class="rounded-lg w-full h-[240px] object-cover"
+            />
+          </div>
+          <div class="min-w-[160px]">
+            <img
+              src="img/Number6.jpg"
+              alt="All of Us Are Dead"
+              class="rounded-lg w-full h-[240px] object-cover"
+            />
+          </div>
+          <div class="min-w-[160px]">
+            <img
+              src="img/Number7.jpg"
+              alt="Big Hero 6"
+              class="rounded-lg w-full h-[240px] object-cover"
+            />
+          </div>
+        </div>
+        <button
+          onclick="scrollCarousel('carousel2', 'right')"
+          class="absolute right-0 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 p-2 rounded-full z-10"
+        >
+          &#9654;
+        </button>
+      </div>
+    </div>
+
+    <!-- Optional: Hide scrollbar -->
+    <style>
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+  </body>
+</html>
+
+<!-- Footer -->
+<footer
+  class="w-[1440px] h-[284px] px-[80px] pt-[60px] pb-[60px] border-t border-gray-600 text-white bg-[#141414]"
+>
+  <div class="flex justify-between text-sm gap-[20px]">
+    <!-- Kiri: Logo + Copyright -->
+    <div class="flex flex-col gap-4">
+      <div class="flex items-center gap-2">
+        <img src="img/logo-white.svg" alt="Chill Logo" class="w-8 h-8" />
+        <h1 class="text-xl font-bold">CHILL</h1>
+      </div>
+      <p class="text-gray-400">@2023 Chill All Rights Reserved.</p>
+    </div>
+
+    <!-- Tengah: Genre -->
+    <div class="flex flex-col gap-4">
+      <h2 class="font-semibold">Genre</h2>
+      <div class="grid grid-cols-3 gap-x-12 gap-y-2">
+        <p>Aksi</p>
+        <p>Drama</p>
+        <p>Komedi</p>
+        <p>Anak-anak</p>
+        <p>Fantasi Ilmiah & Fantasi</p>
+        <p>Petualangan</p>
+        <p>Anime</p>
+        <p>Kejahatan</p>
+        <p>Perang</p>
+        <p>Britania</p>
+        <p>KDrama</p>
+        <p>Romantis</p>
+        <p>Sains & Alam</p>
+        <p>Thriller</p>
+      </div>
+    </div>
+
+    <!-- Kanan: Bantuan -->
+    <div class="flex flex-col gap-4">
+      <h2 class="font-semibold">Bantuan</h2>
+      <div class="flex flex-col gap-2">
+        <p>FAQ</p>
+        <p>Kontak Kami</p>
+        <p>Privasi</p>
+        <p>Syarat & Ketentuan</p>
+      </div>
+    </div>
+  </div>
+</footer>
